@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="motsoft_report_vat_report_base" inherit_id="account_financial_report.report_vat_report_base">
+        <xpath expr="//t[@t-out=&quot;tax['name']&quot;]" position="after">
+            <xpath expr="./t" position="after">
+                <span> - </span>
+                <t t-att-style="style" t-out="tax['description']" />
+            </xpath>
+        </xpath>
+    </template>
+
+</odoo>
